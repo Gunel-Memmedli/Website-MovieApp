@@ -1,0 +1,370 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("global.css");
+@import url("buttons.css");
+html {
+  scroll-behavior: smooth;
+}
+main {
+  min-height: calc(100vh-138px);
+}
+#showcase {
+  background: linear-gradient(
+      to bottom,
+      rgb(219, 219, 31, 0.2),
+      rgba(171, 205, 19, 0.315)
+    ),
+    url("../img/film.jpeg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+}
+#showcase .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(46, 76, 109, 0.3);
+  padding: 25px;
+  font-size: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+@media (max-width: 756px) {
+  #showcase .content {
+    padding: 15px 34px;
+  }
+}
+@media (max-width: 577px) {
+  #showcase .content {
+    padding: 5px 12px;
+  }
+}
+@media (max-width: 442px) {
+  #showcase {
+    height: 47vh;
+  }
+}
+#showcase h1 {
+  position: absolute;
+  padding: 19px;
+  top: 50%;
+  margin: 0;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Yan telefon */
+@media (min-width: 576px) {
+  #showcase {
+    height: 50vh;
+  }
+  #showcase .content {
+    font-size: 23px;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) {
+  #showcase {
+    height: 60vh;
+  }
+  #showcase .content {
+    font-size: 25px;
+  }
+}
+/* Notebook */
+@media (min-width: 992px) {
+  #showcase {
+    height: 70vh;
+  }
+  #showcase .content {
+    font-size: 26px;
+  }
+}
+
+.main-header {
+  background-color: #ff9900;
+  padding: 8px 16px;
+}
+.main-nav {
+  display: inline-block;
+  width: calc(100% - 101px);
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav__item {
+  display: inline-block;
+  margin: 0 10px;
+}
+.main-header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+.main-header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+}
+.main-nav__item:last-child {
+  display: none;
+}
+@media (max-width: 767px) {
+  .main-nav__item {
+    display: none;
+  }
+  .main-nav__item:last-child {
+    display: block;
+  }
+  .responsive .main-nav__item {
+    display: block;
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  .responsive .main-nav__item:last-child {
+    position: absolute;
+    right: 30px;
+    top: 6px;
+  }
+  .responsive .main-nav {
+    display: block;
+  }
+}
+.main-nav__item--login {
+  text-decoration: none;
+  color: #fff;
+}
+.main-nav__item--login:hover
+/*,
+.main-nav__item:hover::before*/ {
+  color: #ff5b00;
+}
+.main-nav__item--movies:hover,
+.main-nav__item--series:hover {
+  color: #ff5b00 !important;
+}
+.main-nav__item:active::before,
+.main-nav__item a:active {
+  color: #fff;
+}
+.fa-bars {
+  font-size: 2rem;
+  color: #fff;
+}
+.fa-bars:hover {
+  color: #ff5b00 !important;
+}
+
+#how-it-works {
+  padding: 10px;
+  text-align: center;
+}
+.icon-box h3 {
+  /* color: #3e4555; */
+  font-size: 26px;
+}
+.icon-box i {
+  color: #ff9900;
+}
+.features__left {
+  background: linear-gradient(
+      to bottom,
+      rgba(219, 219, 31, 0.2),
+      rgba(171, 205, 19, 0.1)
+    ),
+    url("../img/features.jpeg");
+  background-size: cover;
+  background-position: top center;
+}
+.features__movie{
+  background: linear-gradient(
+      to bottom,
+      rgba(219, 219, 31, 0.2),
+      rgba(171, 205, 19, 0.1)
+    );
+  background-size: cover;
+  background-position: top center;
+}
+.features__right {
+  background-color: #edf5f7;
+  padding: 40px;
+  vertical-align: top;
+}
+.features__movie,
+.features__left,
+.features__right {
+  height: 350px;
+}
+.features__right h3 {
+  font-size: 30px;
+}
+@media (max-width: 475px) {
+  .features__right {
+    padding: 10px;
+  }
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.plan {
+  text-align: center;
+  padding: 5px;
+}
+.plan__badge {
+  background: #fff;
+  color: #ff5b00;
+  padding: 8px;
+  border-radius: 5px;
+}
+@media (min-width: 1200px) {
+  .card-all {
+    margin: auto;
+    width: 992px;
+  }
+}
+@media (max-width: 768px) {
+  #counters .col-3 {
+    display: inline-block;
+    width: 33%;
+  }
+}
+.inner-plan:hover .plan__badge {
+  background-color: black;
+}
+.inner-plan:hover {
+  background-color: #ffb84d;
+}
+.recommended_plan:hover {
+  background-color: #ff5b00;
+}
+.inner-plan {
+  background: #999999;
+  padding: 25px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.4s;
+}
+.inner-plan:hover {
+  box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.9);
+}
+.plan__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .plan--featured {
+    position: relative;
+    top: -20px;
+  }
+}
+.plan__features li {
+  margin: 5px 0;
+}
+#backtotop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#backtotop i {
+  color: #ffd699;
+  font-size: 45px;
+  transition: color 0.6s;
+}
+#backtotop i:hover {
+  color: #ff5b00;
+}
+.counter {
+  background: linear-gradient(to bottom, #ffa31a 0%, #ff9900 100%);
+  text-align: center;
+  padding: 50px;
+}
+.counter__item {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.counter h4 {
+  margin: 0;
+  color: #fff;
+}
+.card-container {
+  padding: 10px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.9);
+  /* position: relative; */
+  /* top: 0; */
+  transition: all 0.5s;
+}
+.card:hover {
+  /* top: -10px; */
+  transform: translateY(-10px);
+}
+.card-image {
+  max-height: 350px;
+}
+.card-body {
+  padding: 30px;
+}
+footer {
+  background-color: #ff5b00;
+  padding: 30px;
+}
+footer a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+#social-links {
+  text-align: right;
+}
+.fab,
+.fas,
+.far {
+  padding: 10px;
+  font-size: 45px;
+  border-radius: 50%;
+}
+.fab:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background-color: #0a2070;
+  color: #fff;
+}
+.fa-twitter {
+  background-color: #08e7db;
+  color: #fff;
+}
+.fa-instagram {
+  background-color: #da3600;
+  color: #fff;
+}

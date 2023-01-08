@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/forms.css">
+    <style>
+        footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <header class="main-header">
+        <div id="main-nav" class="container ">
+            <a href="./index.html" class="main-header__logo">MovieApp</a>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item main-nav__item--movies">
+                        <a class="btn btn-secondary" href="./movies.html">Movies</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--series">
+                        <a class="btn btn-secondary" href="./series.html">Series</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--login">
+                        <a class="btn btn-outline-secondary" href="./register.html">Login</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--signup">
+                        <a class="btn btn-outline-secondary" href="./signup.html">Sign Up</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#" onclick="displayMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="signup-page">
+        <div class="container">
+            <h1 class="signup-title">Sign Up</h1>
+            <form action="" class="signup-form">
+
+                <label for="email">Email</label>
+                <input type="email" id="email">
+
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <ul id="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul id="social-links">
+                        <li><a href="" class="fab fa-facebook"></a></li>
+                        <li><a href="" class="fab fa-twitter"></a></li>
+                        <li><a href="" class="fab fa-instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#body" id="backtotop">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
+
+    <script>
+        function displayMenu() {
+            var link = document.getElementById("main-nav");
+            link.classList.toggle("responsive");
+        }
+    </script>
+
+</body>
+
+</html>
